@@ -4,7 +4,6 @@ require 'optparse'
 $system_salt = '' # Salt to strengthen encryption
 $key = "" # Password for encryption key generation
 
-
 def encrypt(alg, password, string)
    begin
       case alg
