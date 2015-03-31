@@ -3,7 +3,7 @@ require 'optparse'
 
 $system_salt = '' # Salt to strengthen encryption
 $key = "" # Password for encryption key generation
-
+#alg
 def encrypt(alg, password, string)
    begin
       case alg
@@ -37,7 +37,7 @@ def decrypt(alg, password, cipher)
    end
    return decrypted_text
 end
-
+# p e.trace
 options = {:file => nil, :operation => nil, :key => nil, :alg => nil}
 
 parser = OptionParser.new do |opts|
