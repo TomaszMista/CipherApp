@@ -30,10 +30,10 @@ class Cipher
    
     begin
        case alg
-        when "3des" then key = EzCrypto::Key.with_password(password, $system_salt, :algorithm => 'des3')
-        when "aes" then key = EzCrypto::Key.with_password(password, $system_salt, :algorithm => 'aes256')
-        when "blowfish" then key = EzCrypto::Key.with_password(password, $system_salt, :algorithm => 'blowfish')
-        when "plaintext" then return cipher
+        when "3DES" then key = EzCrypto::Key.with_password(password, $system_salt, :algorithm => 'des3')
+        when "AES" then key = EzCrypto::Key.with_password(password, $system_salt, :algorithm => 'aes256')
+        when "Blowfish" then key = EzCrypto::Key.with_password(password, $system_salt, :algorithm => 'blowfish')
+        when "Plaintext" then return cipher
             else key = EzCrypto::Key.with_password(password, $system_salt, :algorithm => 'aes256')
        end
        decrypted_text = key.decrypt64(cipher)
